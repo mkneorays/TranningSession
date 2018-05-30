@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Unwraping elements</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('div').wrap('<div class="containerDIV"></div>s');
+	$('div').unwrap();
+})
+</script>
+</head>
+<body style="font-family: Arial" bgcolor="wheat">
+<h1>unwrap() method removes the parent of the set of matched elements</h1>
+<div id="div1" title="My DIV1">
+DIV 1
+</div><br>
+<div id="div2" title="My DIV2">
+DIV 2
+</div><br>
+<div id="div3" title="My DIV3">
+DIV 2
+</div><br>
+</body>
+</html>

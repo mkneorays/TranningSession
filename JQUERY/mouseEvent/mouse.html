@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Change event</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body bgcolor="orange">
+<h1>This is jQuery mouse Event</h1>
+<table>
+	<tr>
+		<td>First Name</td>
+		<td><input id="txt1" type="text" class="inputRequired"/></td>
+		<td><img id="img1" src="help.png" width="25" height="25"></td>
+		<td><div id="div1" style="display:none">First name as shown in passport</div></td>
+	</tr>
+	<tr>
+		<td>Last Name</td>
+		<td><input id="txt2" type="text" class="inputRequired"/></td>
+		<td><img id="img2" src="help.png" width="25" height="25"></td>
+		<td><div id="div2" style="display:none">Last name as shown in passport</div></td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td>
+			<select id="ddlCity" class="inputRequired">
+			<option value="Select">Select</option>
+			<option value="Bangalore">Bangalore</option>
+			<option value="NewYork">New York</option>
+			<option value="Chennai">Chennai</option>
+			<option value="London">London</option>
+			<option value="Sydney">Sydney</option>
+			</select>
+		</td>
+		<td><img id="img3" src="help.png" width="25" height="25"></td>
+		<td><div id="div3" style="display:none">Select your city</div></td>
+	</tr>
+	<tr>
+		<td>Favourite Color</td>
+		<td>
+			<input id="radio1" name="color" type="radio" value="Pink" class="inputRequired"/>Red
+			<input id="radio2" name="color" type="radio" value="Orange" class="inputRequired"/>Orange
+			<input id="radio3" name="color" type="radio" value="Purple" class="inputRequired"/>Purple
+		</td>
+		<td><img id="img4" src="help.png" width="25" height="25"></td>
+		<td><div id="div4" style="display:none">select your favourite color</div></td>
+	</tr>
+	<tr>
+		<td>Contact Method</td>
+		<td>
+			<input id="chkbox1" type="checkbox" value="Email" class="inputRequired"/>Email
+			<input id="chkbox2" type="checkbox" value="Phone" class="inputRequired"/>Phone
+			<input id="chkbox3" type="checkbox" value="Social Media" class="inputRequired"/>Social Media
+		</td>
+		<td><img id="img5" src="help.png" width="25" height="25"></td>
+		<td><div id="div5" style="display:none">Provide your contact information</div></td>
+	</tr>
+	<tr>
+		<td>Comments</td>
+		<td>
+			<textarea id="comments" class="inputRequired"/></textarea>
+		</td>
+		<td><img id="img6" src="help.png" width="25" height="25"></td>
+		<td><div id="div6" style="display:none">Write your comments</div></td>
+	</tr>
+	<tr>
+		<td>
+			<input id="btn1" type="button" value="submit"/>
+		</td>
+		<td>
+			<div id="divResult"></div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>demoPage</title>
+
+<script language="javascript">
+function msg(){
+document.getElementById("host").innerHTML=navigator.host;
+document.getElementById("url").innerHTML=navigator.url;//undefinrd
+document.getElementById("hostname").innerHTML=navigator.hostname;//undefined
+}
+</script> 
+</head>
+<body onload="msg()">
+<h1>welcome to javascript
+</h1>
+<div id="host"></div>
+<div id="url"></div>
+<div id="hostname"></div>
+</body>
+</html>

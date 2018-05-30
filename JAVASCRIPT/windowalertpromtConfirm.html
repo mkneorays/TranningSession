@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>demoPage</title>
+
+<script type="text/javascript">
+function alertWindow(){
+window.alert("be careful bro")
+}
+
+function confirmWindow(){
+var s=confirm("are u sure u want to delete");
+if(s==true){
+document.getElementById("msg").innerHTML="you clicked okkk";
+}//if
+else
+{
+document.getElementById("msg").innerHTML="you clicked cancle";
+}//else
+
+}//confirmWindow
+
+
+function promptWindow(){
+var name=prompt("name","name min 4 char");
+document.getElementById("msg").innerHTML="hello "+name;
+if(name==null){
+document.getElementById("msg").innerHTML="please enter name";
+}
+}//promptWindow
+
+</script>
+</head>
+<body>
+<h1>welcome to javascript
+</h1>
+Result:: <div id="msg"></div>
+<input type="button" value="alert Window" onclick="alertWindow()"><br>
+<input type="button" value="confirm  Window" onclick="confirmWindow()"><br>
+<input type="button" value="prompt Window" onclick="promptWindow()"><br>
+
+
+</body>
+</html>

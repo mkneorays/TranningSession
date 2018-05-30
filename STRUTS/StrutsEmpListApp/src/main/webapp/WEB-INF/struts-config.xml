@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<!-- <form-beans>
+		<form-bean name="EmpInsert" type="com.neorays.form.EmployeeForm" />
+	</form-beans> -->
+
+	<action-mappings>
+	<action path="/insert" type="com.neorays.action.EmployeeInsertAction"   scope="request">
+		<!-- 	<forward name="success" path="/pages/iert.jsp" /> -->
+		</action>
+		
+		<action path="/select" type="com.neorays.action.EmployeeSelectAction"
+			scope="request">
+			<forward name="success" path="/pages/emp_list.jsp" />
+		</action>
+		
+	</action-mappings>
+ <!-- <message-resources parameter="myapp.ApplicationResource"/> -->
+
+
+</struts-config> 

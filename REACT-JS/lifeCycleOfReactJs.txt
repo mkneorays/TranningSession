@@ -1,0 +1,226 @@
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import './index.css';
+class Hello extends React.Component{
+	//u can define constructor also
+	constructor(){
+	  super(); //this is mandateroy
+	 console.log("constructor");
+	 
+	   
+	   //this is a state
+	  this.state={
+	    count:0 , count1:20
+	  }//state
+	}//constructor  //life cycle method  (1)
+//this is a function call
+  intCount =() =>{
+   this.setState({
+     count : this.state.count + 1
+   })
+  }//function
+	 
+	 //this is a function call
+  intCount1 =() =>{
+   this.setState({
+     count1 : this.state.count1 - 1
+   })
+  }//function
+
+	 //its a important life cycle method
+	 //its return only boolean value 
+	 //if retutn true its means method render
+	 //if false  its means method not render
+	 shouldComponentUpdate(){
+		  console.log("shouldComponentUpdate");
+	 if(this.state.count > 10){
+	   return false;
+	 }//if
+	 return true;
+	 }//life cycle method  (5 together call three life cycle method)
+
+	componentWillMount(){
+		 console.log("componentWillMount");
+	}//life cycle method (2)
+ componentWillReceiveProps(){
+        console.log("componentWillReceiveProps");
+    }//life cycle method 
+	 
+    componentWillUpdate(){
+        console.log("componentWillUpdate method");
+    } //LifeCycle method  (5)
+	 componentDidUpdate(){
+        console.log("componentDidUpdate method");
+    } //LifeCycle method  (5)
+   
+    componentWillUnmount(){
+        console.log("componentWillUnmount method");
+    } //LifeCycle method 
+	componentDidMount(){
+		 console.log("componentDidMount");
+		 //here best place , we can call ajax method
+	}//life cycle method   (4)
+	
+   
+render(){
+	 console.log("rendering");
+return (
+ <h1>Hello Good Morning <br/><br/>
+	{this.state.count}
+  <button onClick={this.intCount}>INCREMENT</button>
+	 <br/>	  <br/>
+	  <br/>	  <br/> 
+{this.state.count1}
+  
+ <button onClick={this.intCount1}>DECREMENT</button>
+</h1>	)
+}//render method  //life cycle method (3)
+}//class
+
+ReactDOM.render(<Hello/>,document.getElementById("root"))
+
+/*  
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import './index.css';
+class Hello extends React.Component{
+	//u can define constructor also
+	constructor(){
+	  super(); //this is mandateroy
+	 console.log("constructor");
+	 
+	   
+	   //this is a state
+	  this.state={
+	    count:0 , count1:20
+	  }//state
+	}//constructor  //life cycle method  (1)
+//this is a function call
+  intCount =() =>{
+   this.setState({
+     count : this.state.count + 1
+   })
+  }//function
+	 
+	 //this is another function call
+  intCount1 =() =>{
+   this.setState({
+     count : this.state.count - 1
+   })
+  }//function
+render(){
+	 console.log("rendering");
+return (
+ <h1>Hello Good Morning <br/><br/>
+	{this.state.count}  //its for no printing
+  <button onClick={this.intCount}>INCREMENT</button>
+	 <br/>	  <br/>
+	  <br/>	  <br/> 
+
+  
+ <button onClick={this.intCount1}>DECREMENT</button>
+</h1>	)
+}//render method  //life cycle method (3)
+}//class
+
+ReactDOM.render(<Hello/>,document.getElementById("root"))
+
+*/
+
+/*
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import './index.css';
+class Hello extends React.Component{
+	//u can define constructor also
+	constructor(){
+	  super(); //this is mandateroy
+	  this.name="davit";
+	 
+	  /*  //this is a state
+	 this.state={
+	     tasks: [{
+			 name :'Mohan',
+		     completed : false
+		 },
+		  {
+                  name :'Ram',
+		     completed : false
+			 },{
+			        name :'Sohan',
+		     completed : false
+			 }]
+
+	  }//state   
+	   //this is a state
+	  this.state={
+	     name1: ['Mithilesh',' Chandra','yougesh']
+	  }//state
+	}//constructor
+render(){
+return (
+ <h1>Helo Good Morning  {
+	this.state.name1.map(function(nam){
+		return<World key={nam}  detail={nam}/>
+	})//function
+		}
+   
+</h1>	
+//key={nam} Warning: Each child in an array or iterator should have a unique "key" prop.
+)
+}//render method
+}//class
+class World extends React.Component
+{
+	
+render(){
+   return(
+  <li>
+    {this.props.detail}	  
+  </li>
+   
+   )
+}//render
+}//class
+ReactDOM.render(<Hello/>,document.getElementById("root"))
+ */
+
+/*
+ lifecycle method
+
+  //LifeCycle method 1
+    componentWillMount(){
+        console.log("inside componentWillMount method");
+    }
+    //LifeCycle method 2
+    componentDidMount(){
+        console.log("inside componentDidMount method");
+    }
+    //LifeCycle method 3
+    componentWillReceiveProps(){
+        console.log("inside componentWillReceiveProps method");
+    }
+    //LifeCycle method 4
+    shouldComponentUpdate(){
+        console.log("inside shouldComponentUpdate method");
+        return true;
+    }
+    //LifeCycle method 5
+    componentWillUpdate(){
+        console.log("inside componentWillUpdate method");
+    }
+    //LifeCycle method 6
+    componentDidUpdate(){
+        console.log("inside componentDidUpdate method");
+    }
+    //LifeCycle method 7
+    componentWillUnmount(){
+        console.log("inside componentWillUnmount method");
+    }
+*/

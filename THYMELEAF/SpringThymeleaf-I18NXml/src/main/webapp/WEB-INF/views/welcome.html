@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"> 
+<title th:text="#{Lable.title}">I18N</title>
+</head>
+<body>
+ Language :  <a href="?lang=es">TELGU</a>  | <a href="?lang=hi">HINDI</a>  |  <a href="?lang=en">ENGLISH</a>
+   <h1>Spring MVC + Thymeleaf  Hello World example</h1>
+   <h1 th:text="#{welcome.msg}">Thymeleaf</h1>
+  Name:: <input type="text" name="name">
+  <br>
+   <p th:text="${message}"></p>
+</body>
+</html>

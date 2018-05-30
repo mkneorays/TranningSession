@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>using :input selector</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(':input').each(function(){
+		alert($(this).val());
+	});
+});
+</script>
+</head>
+<body style="font-family:Aerial">
+<h1>Using :input selector</h1>
+First name:<input type="text" value="Pruthvi"/><br>
+Last name:<input type="text" value="TS"/><br>
+Gender:
+<input type="radio" name="gender" checked="checked" value="Female">Female
+<input type="radio" name="gender" value="Male">Male<br>
+Skills:
+<input type="checkbox"  name="skills" checked="checked" value="JavaScript">JavaScript
+<input type="checkbox"  name="skills" checked="checked" value="jQuery">jQuery
+<input type="checkbox"  name="skills" value="c#">c#<br><br>
+Country:
+<select>
+<option selected="selected" value="India">India</option>
+<option value="USA">USA</option>
+<option value="Australia">Australia</option>
+</select>
+<br/><br/>
+Summary:<br>
+<textarea>Hai Everyone. Welcome to the new world of jQuery. Keep Learning. Enjoy your life in learning.</textarea>
+<br><br>
+<input type="submit" value="submit"/>
+</body>
+</html>

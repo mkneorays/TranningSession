@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+	
+	  <form-bean name="EmployeeForm" type="com.neorays.form.EmployeeForm"/>
+		
+	</form-beans>
+	
+	<action-mappings> 
+		<action path="/login" type="com.neorays.action.CurdAction"  name="EmployeeForm" 
+				parameter="method"  	validate="true" input="/jsp/home.jsp">
+			<forward name="insert" path="/jsp/insert.jsp"/>
+            <forward name="select" path="/jsp/select.jsp"/>
+           <!--  <forward name="multiply" path="/jsp/multiply.jsp"/> -->
+        </action>
+        
+        <action path="/delete" type="com.neorays.action.EmployeeDelete"> 
+            <forward name="select" path="/jsp/delete.jsp"/>
+        </action>
+        
+         <action path="/update" type="com.neorays.action.EmployeeUpdate"> 
+            <forward name="update" path="/jsp/update.jsp"/>
+        </action>
+        
+        <action path="/update1" type="com.neorays.action.EmployeeUpdate1"> 
+            <forward name="update" path="/jsp/update1.jsp"/>
+        </action>
+        
+	</action-mappings> 
+ <message-resources parameter="com/neorays/file/ApplicationResources"/>
+</struts-config> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 	<form-bean name="loginForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="name" type="java.lang.String"/>
+			<form-property name="age" type="java.lang.String"/>
+			<form-property name="address" type="java.lang.String"/>
+			validate="true" input="/jsp/home.jsp"
+		</form-bean> -->

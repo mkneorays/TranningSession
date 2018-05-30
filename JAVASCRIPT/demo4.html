@@ -1,0 +1,35 @@
+																									<html>
+<head>
+<title>using by name</title>
+<style>
+.backStyle{
+background-color:red;
+}
+</style>
+<script type="text/javascript">
+
+function bodyload(){
+//kkkk
+document.getElementById("txtName").value="mithilesh";
+window.document.getElementById("btnsubmit").value="submit";
+}
+</script>
+</head>
+
+<body  class="backStyle" onload="bodyload()">
+<div>
+<h2 class="backStyle">Register</h2>
+</div>
+<h1>refering html elements from javascript by using getElementById</h1>
+<form name="frmHome">
+
+Enter Name::<input type="text" id="txtName">
+<div>
+<input type="button" id="btnsubmit">
+</div>
+
+
+</form>
+</body>
+
+</html>

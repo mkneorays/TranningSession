@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div11").fadeOut();
+        $("#div21").fadeOut("slow");
+        $("#div31").fadeOut(3000);
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div12").fadeToggle();
+        $("#div22").fadeToggle("slow");
+        $("#div32").fadeToggle(3000);
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div13").fadeTo("slow", 0.15);
+        $("#div23").fadeTo("slow", 0.4);
+        $("#div33").fadeTo("slow", 0.7);
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button>Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+
+<p>Demonstrate fadeOut() with different parameters.</p>
+
+<button>Click to fade out boxes</button><br><br>
+
+<div id="div11" style="width:80px;height:80px;background-color:red;"></div><br>
+<div id="div21" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div31" style="width:80px;height:80px;background-color:blue;"></div>
+
+
+<p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+<button>Click to fade in/out boxes</button><br><br>
+
+<div id="div12" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div id="div22" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+<div id="div32" style="width:80px;height:80px;background-color:blue;"></div>
+
+
+<p>Demonstrate fadeTo() with different parameters.</p>
+
+<button>Click to fade boxes</button><br><br>
+
+<div id="div13" style="width:80px;height:80px;background-color:red;"></div><br>
+<div id="div23" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div33" style="width:80px;height:80px;background-color:blue;"></div>
+
+</body>
+</html>
+

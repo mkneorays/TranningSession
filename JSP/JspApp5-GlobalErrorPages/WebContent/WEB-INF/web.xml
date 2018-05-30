@@ -1,0 +1,14 @@
+<web-app>
+ <error-page>
+   <exception-type>java.lang.NumberFormatException</exception-type>
+   <location>/err.jsp</location>
+</error-page>
+
+<error-page>
+ <exception-type>java.lang.NullPointerException</exception-type>
+ <location>/myErr.html</location>
+</error-page>
+
+
+
+</web-app>

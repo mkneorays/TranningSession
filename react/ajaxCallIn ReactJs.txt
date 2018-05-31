@@ -1,0 +1,46 @@
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
+import './index.css';
+class Hello extends React.Component{
+	//u can define constructor also
+	constructor(){
+	  super(); //this is mandateroy
+	 console.log("constructor");
+	 
+	   
+	   //this is a state
+	  this.state={
+	   users :[]
+	  }//state
+	}//constructor  //life cycle method  (1)
+  componentDidMount(){
+		 console.log("componentDidMount");
+		 //here best place , we can call ajax method
+          $.ajax({
+		    url : 'https://jsonplaceholder.typicode.com/users',
+				success : (data) => {
+			   this.setState({
+			      users  : data
+			   })
+			}//success
+		  })
+
+	}//life cycle method   (3)
+   
+render(){
+	 console.log("rendering");
+	 const {users } = this.state;
+return (
+ <h1>Hello Good Morning <br/><br/>
+	{
+      users.map((user) =>{
+	   return <li key={user.id}>{user.name}</li>
+	  }) 
+    }
+</h1>	)
+}//render method  //life cycle method (2)
+}//class
+
+ReactDOM.render(<Hello/>,document.getElementById("root"))

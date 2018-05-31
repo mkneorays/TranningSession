@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>form validations</TITLE>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+form label {
+  display: inline-block;
+  width: 100px;
+}
+ h2 {
+  text-align :center;
+  color :red;
+  }
+  form {
+   text-align :center;
+  color :red;
+  }
+</style>
+
+</HEAD>
+
+<BODY>
+<!-- First Form -->
+<h2 >Example 1:</h2>
+<form id="first_form" method="post" action="">
+  <div>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name"></input>
+  </div>
+  <br>
+  <div>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name"></input>
+  </div>
+   <br>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"></input>
+  </div>
+   <br>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"></input>
+  </div>
+   <br>
+  <div>
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+</BODY>
+</HTML>

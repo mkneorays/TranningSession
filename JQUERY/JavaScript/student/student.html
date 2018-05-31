@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>student page</title>
+
+ <link  rel="stylesheet" href="style.css"/>
+ <script  type="text/javascript" src="student.js"></script>
+
+</head>
+<body>
+	<h1>Please Insert Student Details</h1>
+	<form action="#" name="myForm"  onsubmit="return myFunction()">
+	<fieldset>
+	  <legend >Student Details</legend>
+	  Name : <input type="text" name="Name"  placeholder="enter your name" pattern="[A-Za-z]{5,15}"><br><br>
+	  <!-- Email : <input type="text"  name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required"><br><br> -->
+	  Email : <input type="email"  name="email"><br><br>
+	  Age : <input type="number" name="age" max="99" min="20" placeholder="enter your age"  ><br><br>
+	  Address : <input type="text" name="address" placeholder="enter your address" pattern="[A-Za-z]{10,20}"  ><br><br>
+	  Mob No : <input type="text" name="mob" pattern="[0-9]{10}" placeholder="enter your mobile no" requried ><br><br>
+	  Gender : <input type="radio" name="gender" value="male" checked="checked">Male <br>
+	                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   <input type="radio" name="gender" value="female">Female<br>
+	               &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="radio" name="gender" value="third party">Others<br>
+	  D.O.B : <input type="date" name="DOB"><br><br>
+	  Hobby : <select name="hobby" >
+	                        <option>Chess</option>
+	                        <option selected="selected">Cricket</option>
+	                        <option>Hockey</option>
+	                   </select><br><br>
+	
+	  <input type="submit" value="SUBMIT">
+	  </fieldset>
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<Person xmlns:a="http://www.dddddd/eeeee/ddddd/dddsf">
+
+<user id="1"  xmlns:b="http://www.dddddd/eeeee/ddddd/dddsf">
+<id>23</id>
+<b:name >mithu</b:name>
+</user>
+
+<user id="2">
+<id>23</id>
+<name>mithu</name>
+</user>
+
+<user>
+<id>23</id>
+<name>mithu</name>
+</user>
+
+<user id="3">
+<a:id>23</a:id>
+<name>mithu</name>
+</user>
+
+</Person>

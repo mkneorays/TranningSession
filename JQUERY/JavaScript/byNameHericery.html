@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>using by name</title>
+<script type="text/javascript">
+function bodyload(){
+//kkkk
+document.frmHome.txtName.value="mithilesh";
+window.document.frmHome.btnsubmit.value="submit";
+}
+</script>
+</head>
+
+<body onload="bodyload()">
+<h1>refering html elements from javascript by name</h1>
+<form name="frmHome">
+
+Enter Name::<input type="text"name="txtName">
+<div>
+<input type="button"name="btnsubmit">
+</div>
+
+
+</form>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="#{Lable.title}">Title</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+<a href="?lang=hi">HINDI</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="?lang=en">ENGLISH</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <a href="?lang=es">TELGU</a> 
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9 col-9">
+			<h1 th:text="#{welcome.msg}"></h1>
+			<form method="post" class="form-horizontal" action="createPolicy" th:object="${policyHolder}">
+				<h3 th:text="#{Form.heading}"></h3>
+				<div th:class="${#fields.hasErrors('firstName')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.firstName}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{firstName}" class="form-control" />
+						<p th:errors="*{firstName}" class="help-block"></p>
+					</div>
+					
+				</div>
+				<div  th:class="${#fields.hasErrors('lastName')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.lastName}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{lastName}"  class="form-control" />
+						<p th:errors="*{lastName}" class="help-block"></p>
+					</div>
+				</div>
+				<div th:class="${#fields.hasErrors('dob')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.dob}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<input type="text" placeholder="dd/MM/yyyy" th:field="*{dob}" class="form-control" />
+						<p th:errors="*{dob}" class="help-block"></p>
+					</div>
+				</div>
+				<div th:class="${#fields.hasErrors('gender')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.gender}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<label class="radio-inline"> 
+							<input type="radio" th:field="*{gender}" value="M" />Male
+						</label> 
+						<label class="radio-inline"> 
+							<input type="radio" th:field="*{gender}" value="F" />Female
+						</label>
+						<p th:errors="*{gender}" class="help-block"></p>
+					</div>
+				</div>
+				<div th:class="${#fields.hasErrors('mobile')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.mobile}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{mobile}" class="form-control" maxlength="10"/>
+						<p th:errors="*{mobile}" class="help-block"></p>
+					</div>
+				</div>
+				<div th:class="${#fields.hasErrors('policyInfo.policyType')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.policyType}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<select th:field="*{policyInfo.policyType}" class="form-control">
+							<option th:value="-1" th:text="#{Label.policyType.defaultSelect}"></option>
+							<option th:each="policyType:${policyTypes}" th:value="${policyType.key}"
+								th:text="${policyType.value}" />
+						</select>
+						<p th:errors="*{policyInfo.policyType}" class="help-block"></p>
+					</div>
+				</div>
+				<div th:class="${#fields.hasErrors('policyInfo.sumAssured')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.sumAssured}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{policyInfo.sumAssured}" class="form-control" />
+						<p th:errors="*{policyInfo.sumAssured}" class="help-block"></p>
+					</div>
+				</div>
+				<div th:class="${#fields.hasErrors('policyInfo.policyTerm')} ? 'form-group has-error' :'form-group'">
+					<label th:text="#{Label.policyTerm}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<select th:field="*{policyInfo.policyTerm}" class="form-control">
+							<option th:value="-1" th:text="#{Label.policyTerm.defaultSelect}"></option>
+							<option th:each="term:${terms}" th:value="${term}"
+								th:text="${term+' Years'}" />
+						</select>
+						<p th:errors="*{policyInfo.policyTerm}" class="help-block"></p>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" th:inline="text" class="btn btn-primary">[[#{Label.save}]]</button>
+					</div>
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

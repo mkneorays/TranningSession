@@ -1,0 +1,21 @@
+body {
+	background-color: buttonface;
+}
+h1{
+   color: red;
+   text-align: center;
+}
+form{
+   color: blue;
+   text-align: center;
+}
+legend{ 
+text-align: left;
+}
+
+fieldset{
+
+ margin-left: 400px;
+  height: 500px;
+  width: 500px;
+}

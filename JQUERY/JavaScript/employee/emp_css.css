@@ -1,0 +1,17 @@
+body {
+
+	 background-image: url(emp_img.jpg);
+	  background-size: 1500px 700px;
+    background-repeat: no-repeat;
+	color:red;
+}
+
+form {
+  margin : 50px 50px 100px 400px;
+
+}
+ table{
+ 
+  background-color:white;
+  margin : 50px 50px 100px 400px;
+ }

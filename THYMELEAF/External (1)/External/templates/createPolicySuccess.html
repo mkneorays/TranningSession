@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="#{Lable.title}">Title</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<h1 th:text="#{welcome.msg}">Welcome Message</h1>
+		<h3 th:text="#{Form.heading}"></h3>
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<tbody>
+					<tr>
+						<th th:text="#{Label.firstName}"></th>
+						<td th:text="${policyHolder.firstName}"></td>
+					</tr>
+					<tr>
+						<th th:text="#{Label.lastName}"></th>
+						<td th:text="${policyHolder.lastName}"></td>
+					</tr>
+					<tr>
+						<th th:text="#{Label.dob}"></th>
+						<td th:text="${#dates.format(policyHolder.dob, 'dd MMM yyyy')}"></td>
+					</tr>
+					<tr>
+						<th th:text="#{Label.gender}"></th>
+						<td th:text="${policyHolder.gender}"></td>
+					</tr>
+					<tr>
+						<th th:text="#{Label.mobile}"></th>
+						<td th:text="${policyHolder.mobile}"></td>
+					</tr>
+					<tr>
+						<th th:text="#{Label.policyType}"></th>
+						<td th:text="${policyHolder.policyInfo!=null ? policyHolder.policyInfo.policyType :''}"></td>
+					</tr>
+					<tr>
+						<th th:text="#{Label.sumAssured}"></th>
+						<td th:text="${policyHolder.policyInfo!=null ? policyHolder.policyInfo.sumAssured :''}"></td>
+					</tr>
+					<tr>
+						<th th:text="#{Label.policyTerm}"></th>
+						<td th:text="${policyHolder.policyInfo!=null ? policyHolder.policyInfo.policyTerm + ' Years' :''}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

@@ -11,7 +11,7 @@ public class MyController {
    @RequestMapping("home.htm")
    public String index(Model model) {
  System.out.println("controller");
-      model.addAttribute("message", "Hello Spring MVC 5! MITHILESH");
+      model.addAttribute("message", "Hello Spring MVC 5!");
       return "welcome";
    }//method
 }//class

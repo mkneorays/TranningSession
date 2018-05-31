@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>navigetor method</title>
+
+<script language="javascript">
+function msg(){
+document.getElementById("name").innerHTML=navigator.userAgent;
+document.getElementById("browser").innerHTML=navigator.appName;//netScape
+document.getElementById("language").innerHTML=navigator.platform;//win32
+}
+</script> 
+</head>
+<body >
+<h1>welcome to javascript of navigetor method</h1>
+<div id="browser"></div>
+<div id="language"></div> 
+<div id="name"></div>
+<div id="browser"></div>
+<input type="button" id="browser" value="click me" onclick="msg()">
+<input type="button" id="language" value="lan me" onclick="msg()">
+<input type="button" id="name" value="name" onclick="msg()">
+</body>
+</html>

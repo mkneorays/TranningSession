@@ -1,0 +1,19 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<Person>
+<user id="1">
+<id>23</id>
+<name>mithu</name>
+</user>
+<user id="2">
+<id>23</id>
+<name>mithu</name>
+</user>
+<user>
+<id>23</id>
+<name>mithu</name>
+</user>
+<user id="3">
+<id>23</id>
+<name>mithu</name>
+</user>
+</Person>

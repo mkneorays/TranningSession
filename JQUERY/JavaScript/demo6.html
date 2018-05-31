@@ -1,0 +1,35 @@
+<html>																								<html>
+<head>
+<title>using by name</title>
+<style>
+.backStyle{
+background-color:red;
+}
+</style>
+<script type="text/javascript">
+function bodyload(){
+//kkkk
+var p=document.getElementByName("txtName");
+var p1=window.document.getElementByTagName("div");
+var p2=document.getElementByClassName("backtyle");
+alert("total no of paments"+p.length);
+}
+</script>
+</head>
+
+<body onload="bodyload()">
+<h1>refering html elements from javascript by using getElementByName andtag and class </h1>
+<form name="frmHome">
+<div>
+<h1 class="backStyle">Register</h1>
+</div>
+Enter Name::<input type="radio" name="txtName"value="giftcard">GiftCard<br>
+<div>
+<input type="button" name="btnsubmit">
+</div>
+
+
+</form>
+</body>
+
+</html>
